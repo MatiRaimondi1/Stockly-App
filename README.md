@@ -1,6 +1,6 @@
 # 📦 Inventory Management Web App
 
-## 🌐 Live Demo & Backend
+## 🌐 Live Demo
 * **Live Application:** [🚀 View Live Demo](https://invmanagement-private.vercel.app/)
 
 ---
