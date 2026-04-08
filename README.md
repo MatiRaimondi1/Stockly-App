@@ -1,7 +1,7 @@
-# Inventory Management App
+# Stockly App
 
 ## Live Demo
-* **Live Application:** [View Live Demo](https://invmanagement-private.vercel.app/)
+* **Live Application:** [View Live Demo](https://stockly-app-sigma.vercel.app/)
 
 ---
 
@@ -31,7 +31,7 @@ This project is built using the following technologies:
 
 ## Screenshot
 
-![Inventory Management Screenshot](repo/website-screenshot.png)
+![Website Screenshot](repo/website-screenshot.png)
 
 ---
 
@@ -40,8 +40,8 @@ This project is built using the following technologies:
 Clone the repository:
 
 ```bash
-git clone https://github.com/MatiRaimondi1/Inventory-Management-App.git
-cd inventory-management-app
+git clone https://github.com/MatiRaimondi1/Stockly-App.git
+cd Stockly-App
 ```
 
 Install dependencies:
