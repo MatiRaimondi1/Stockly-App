@@ -1,13 +1,9 @@
 import "reflect-metadata";
-import {
-    Entity,
-    PrimaryGeneratedColumn,
-    Column,
-    CreateDateColumn,
-    UpdateDateColumn,
-    Index
-} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, Index } from "typeorm";
 
+/**
+ * Product entity
+ */
 @Entity("products")
 @Index(["userId", "name"])
 @Index(["createdAt"])

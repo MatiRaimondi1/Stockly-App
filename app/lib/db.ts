@@ -1,9 +1,11 @@
 import "reflect-metadata"
 import "pg";
 import { DataSource } from "typeorm";
-
 import { Product } from "./entities/Product";
 
+/**
+ * AppDataSource
+ */
 export const AppDataSource = new DataSource({
     type: "postgres",
     url: process.env.DATABASE_URL,

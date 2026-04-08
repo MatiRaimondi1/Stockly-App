@@ -2,11 +2,19 @@
 
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
+/**
+ * Interface for chart data
+ */
 interface ChartData {
     week: string;
     products: number;
 }
 
+/**
+ * ProductChart component
+ * @param param0 
+ * @returns 
+ */
 export default function ProductChart({data}: {data: ChartData[]}) {
     return (
         <div className="h-full w-full">
@@ -53,7 +61,8 @@ export default function ProductChart({data}: {data: ChartData[]}) {
                         itemStyle={{
                             color: "#a855f7",
                             fontSize: "12px",
-                            fontWeight: "bold"
+                            fontWeight: "bold",
+                            textTransform: "uppercase"
                         }}
                         labelStyle={{
                             color: "#71717a",

@@ -1,6 +1,9 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
+/**
+ * Props for the Pagination component
+ */
 interface PaginationProps {
     currentPage: number;
     totalPages: number;
@@ -8,14 +11,28 @@ interface PaginationProps {
     searchParams: Record<string, string>;
 }
 
+/**
+ * Pagination component
+ * @param param0 
+ * @returns 
+ */
 export default function Pagination({currentPage, totalPages, baseUrl, searchParams}: PaginationProps) {
     if (totalPages <= 1) return null;
 
+    /**
+     * Generates the URL for a specific page
+     * @param page 
+     * @returns 
+     */
     const getPageUrl = (page: number) => {
         const params = new URLSearchParams({...searchParams, page: String(page)})
         return `${baseUrl}?${params.toString()}`
     }
 
+    /**
+     * Gets the list of visible pages for pagination
+     * @returns 
+     */
     const getVisiblePages = () => {
         const delta = 2;
         const range = [];
@@ -42,6 +59,10 @@ export default function Pagination({currentPage, totalPages, baseUrl, searchPara
         return rangeWithDots;
     }
 
+    /**
+     * Gets the list of visible pages for pagination
+     * @returns 
+     */
     const visiblePages = getVisiblePages();
 
     return ( 
@@ -75,7 +96,7 @@ export default function Pagination({currentPage, totalPages, baseUrl, searchPara
                         <Link 
                             key={key} 
                             href={getPageUrl(pageNumber)} 
-                            className={`min-w-[40px] h-10 flex items-center justify-center text-sm font-bold rounded-xl transition-all duration-200 ${
+                            className={`min-w-10 h-10 flex items-center justify-center text-sm font-bold rounded-xl transition-all duration-200 ${
                                 isCurrentPage 
                                     ? "bg-purple-600 text-white shadow-[0_0_15px_rgba(147,51,234,0.3)]" 
                                     : "text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/50"

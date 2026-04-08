@@ -3,10 +3,20 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+/**
+ * Preview component
+ * @returns 
+ */
 export default function Preview() {
+    /**
+     * State for managing the current image index
+     */
     const [currentImage, setCurrentImage] = useState(0);
     const images = ["/dashboard-preview.png", "/inventory-preview.png"];
 
+    /**
+     * Effect for automatically cycling through images
+     */
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentImage((prev) => (prev === 0 ? 1 : 0));
@@ -15,8 +25,8 @@ export default function Preview() {
     }, []);
 
     return (
-        <div className="aspect-video rounded-[2rem] bg-zinc-950 border border-zinc-800/50 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10 [background-image:radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px] z-0" />
+        <div className="aspect-video rounded-4xl bg-zinc-950 border border-zinc-800/50 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] bg-size-[40px_40px] z-0" />
 
             {images.map((src, index) => (
                 <div
@@ -28,7 +38,7 @@ export default function Preview() {
                         src={src}
                         alt={`Preview ${index}`}
                         fill
-                        className="object-cover object-top p-1 rounded-[2rem]"
+                        className="object-cover object-top p-1 rounded-4xl"
                         priority
                     />
                 </div>
