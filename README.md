@@ -40,8 +40,8 @@ This project is built using the following technologies:
 Clone the repository:
 
 ```bash
-git clone https://github.com/MatiRaimondi1/Inventory-Management-App.git
-cd inventory-management-app
+git clone https://github.com/MatiRaimondi1/Stockly-App.git
+cd Stockly-App
 ```
 
 Install dependencies:
